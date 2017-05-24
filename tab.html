@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="tab.js"></script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			background-color: #323232;
+			font-size: 12px;
+			padding: 100px;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="tab.css">
+</head>
+<body>
+	<div class="tab js-tab" data-config='{
+											"triggerType":"click",
+											"effect":"fade",
+											"invoke":"2",
+											"auto":2000
+										}'>
+											
+		<ul class="tab-nav">
+			<li class="active"><a >新闻</a></li>
+			<li><a >娱乐</a></li>
+			<li><a >电影</a></li>
+			<li><a >科技</a></li>
+		</ul>
+		<div class="content-wrap">
+			<div class="content-item current"><img src="images/1.jpg"/></div>
+			<div class="content-item"><img src="images/2.jpg"/></div>
+			<div class="content-item"><img src="images/3.jpg"/></div>
+			<div class="content-item"><img src="images/4.jpg"/></div>
+		</div>									
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		var tab = new Tab($(".js-tab").eq(0))
+	})
+</script>
